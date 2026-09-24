@@ -1,0 +1,116 @@
+@use 'sass:color';
+
+@include tablet {
+  .contenedor-anuncios {
+    @include grid(3, 2rem);
+  }
+}
+
+.contenedor-anuncios {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+
+
+}
+
+.anuncios {
+  background-color: $blanco; // fondo blanco para parecer una card
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .contenido-anuncio {
+    padding: 2rem;
+    background-color: color.adjust($gris, $lightness: 5%);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0 0 1rem;
+    min-height: 4.2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  .descripcion-corta {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+       -webkit-line-clamp: 3; // <-- Cantidad de líneas visibles
+       overflow: hidden;
+       text-overflow: ellipsis;
+       overflow-wrap: anywhere;
+
+      // Para que todas las cards tengan el mismo alto visual
+       min-height: 6rem;
+       margin-bottom: 1rem;
+    }
+
+  .boton-amarillo-block {
+    margin-top: auto;
+  }
+
+
+}
+
+.precio {
+    color: $verde;
+    font-weight: $bold;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+  }
+
+.iconos-caracteristicas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: contain;
+    }
+
+    p {
+      font-weight: $black;
+      font-size: 1.4rem;
+    }
+  }
+}

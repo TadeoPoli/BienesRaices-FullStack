@@ -1,0 +1,45 @@
+.no-webp .inicio {
+     background-image: url( ../../../build/img/header.jpg);
+     max-width: 100%;
+}
+.webp .inicio {
+    background-image: url( ../../../build/img/header.webp);
+    max-width: 100%;
+}
+
+.header {
+    background-color: $grisOscuro;
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-position: center 55%;
+        background-size: cover;
+        @include tablet {
+            min-height: 55rem;
+        }
+        .contenido-header {
+            @include tablet {
+                min-height: 55rem;
+            }
+        }
+    }
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+        align-self: center;
+        color: $blanco;
+        font-size: clamp(3.6rem, 5vw, 5.2rem);
+        font-weight: $bold;
+        line-height: 1.25;
+        margin-inline: auto;
+        max-width: 90rem;
+        padding-inline: 1rem;
+        text-align: center;
+    }
+
+}

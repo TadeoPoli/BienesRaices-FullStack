@@ -1,0 +1,69 @@
+@use 'sass:color';
+
+.dark-mode {
+    background-color: color.adjust($grisOscuro, $lightness: -10%);
+
+    p {
+        color: $blanco;
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $blanco;
+    }
+
+
+    .anuncios {
+        background-color: $grisOscuro !important;
+        border: 1px solid $grisOscuro;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+        margin-bottom: 2rem;
+    }
+
+    /* Fondo interior más claro para el contenido */
+    .contenido-anuncio {
+        background-color: color.adjust($grisOscuro, $lightness: 5%) !important;
+    }
+
+    .precio {
+        color: $verde; // mantiene el verde
+    }
+
+   .iconos-nosotros .icono {
+        color: $blanco;
+    }
+
+    .iconos-nosotros .icono h3,
+    .iconos-nosotros .icono p {
+        color: $blanco;
+    }
+
+    .iconos-nosotros .icono img {
+        filter: invert(100%);
+    }
+
+    .texto-nosotros blockquote {
+        color: $blanco;
+    }
+
+    .formulario {
+        label, legend, p {
+            color: $gris;
+        }
+
+        input:not([type="submit"]), textarea,
+        select {
+            background-color: $grisOscuro;
+            border: 1px solid $grisOscuro;
+            color: $blanco;
+        }
+    }
+
+    .propiedades {
+        color: $blanco;
+    }
+
+}

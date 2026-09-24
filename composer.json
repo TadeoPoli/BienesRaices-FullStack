@@ -1,0 +1,16 @@
+{
+    "name": "portfolio/bienesraices-mvc",
+    "description": "Aplicación inmobiliaria MVC en PHP",
+    "type": "project",
+    "require": {
+        "intervention/image": "^3.11",
+        "phpmailer/phpmailer": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\" :  "./models",
+            "MVC\\" : "./mvc",
+            "Controllers\\" : "./controllers"
+        }
+    }
+}

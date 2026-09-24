@@ -1,0 +1,44 @@
+.boton-amarillo {
+    @include boton($amarillo, inline-block);
+}
+
+.boton-amarillo-block {
+    @include boton($amarillo, block);
+}
+
+.boton-verde {
+    @include boton($verde, inline-block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo, block);
+    width: 100%;
+}
+
+.boton-azul-block {
+    @include boton($azul, block);
+    width: 100%;
+}
+
+.boton-azul {
+    @include boton($azul, inline-block);
+}
+
+.boton-verde-anuncios {
+    @include boton($verde, inline-block);
+    font-weight: 700;
+    margin-right: 40.5%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 20%;
+}
+
+.boton-verde-contacto {
+    @include boton($verde, inline-block);
+    font-weight: 700;
+    margin-left: 30%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 50%;
+    height: 5rem;
+}
